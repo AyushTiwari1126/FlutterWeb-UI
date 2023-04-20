@@ -12,6 +12,7 @@ class _SupportFormState extends State<SupportForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.fromLTRB(250, 40, 250, 20),
       height: 400,
       width: 5000,
       child: Column(
@@ -25,10 +26,12 @@ class _SupportFormState extends State<SupportForm> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 500),
+            padding: const EdgeInsets.symmetric(horizontal: 400),
             child: Column(
               children: [
-                SizedBox(height: 16,),
+                SizedBox(
+                  height: 16,
+                ),
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
@@ -36,7 +39,9 @@ class _SupportFormState extends State<SupportForm> {
                     border: InputBorder.none,
                   ),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(
+                  height: 8,
+                ),
                 TextField(
                   decoration: InputDecoration(
                     filled: true,
@@ -44,7 +49,9 @@ class _SupportFormState extends State<SupportForm> {
                     border: InputBorder.none,
                   ),
                 ),
-                SizedBox(height: 8,),
+                SizedBox(
+                  height: 8,
+                ),
                 TextField(
                   maxLines: 7,
                   decoration: InputDecoration(
@@ -53,22 +60,25 @@ class _SupportFormState extends State<SupportForm> {
                     border: InputBorder.none,
                   ),
                 ),
-                SizedBox(height: 8,),
-                 Container(
-                  height: 42,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                        elevation: MaterialStateProperty.all(20),
-                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20))),
-                        backgroundColor:
-                            MaterialStateProperty.all(Color.fromARGB(255, 255, 86, 86))),
-                    onPressed: () {},
-                    child: Text(
-                      helpbuttontext,
-                      style: TextStyle(letterSpacing: 1.2, fontSize: 20),
-                    ),
-                  ))
+                SizedBox(
+                  height: 8,
+                ),
+                Container(
+                    height: 42,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                          elevation: MaterialStateProperty.all(20),
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20))),
+                          backgroundColor: MaterialStateProperty.all(
+                              Color.fromARGB(255, 255, 86, 86))),
+                      onPressed: () {},
+                      child: Text(
+                        helpbuttontext,
+                        style: TextStyle(letterSpacing: 1.2, fontSize: 20),
+                      ),
+                    ))
 
 
                 //-----------Button------------

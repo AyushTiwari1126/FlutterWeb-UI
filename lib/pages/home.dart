@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:webpage/utils/constants.dart';
 import 'package:webpage/widgets/SupportForm.dart';
 import 'package:webpage/widgets/bodyContent.dart';
+import 'package:webpage/widgets/Responsebox.dart';
 import 'package:webpage/widgets/navBar.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -33,6 +35,10 @@ class _HomeState extends State<Home> {
                 BodyContent(),
                 SizedBox(height: 10,),
                 SupportForm(),
+                SizedBox(height: 10,),
+                // Services(),
+                APIRes(),
+
               ],
             ),
           ),
