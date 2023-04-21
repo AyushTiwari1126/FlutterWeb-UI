@@ -9,6 +9,11 @@ class SupportForm extends StatefulWidget {
 }
 
 class _SupportFormState extends State<SupportForm> {
+
+  TextEditingController _mobileTEC = TextEditingController();
+  TextEditingController _emailTEC = TextEditingController();
+  TextEditingController _issueTEC = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,6 +38,7 @@ class _SupportFormState extends State<SupportForm> {
                   height: 16,
                 ),
                 TextField(
+                  controller: _mobileTEC,
                   decoration: InputDecoration(
                     filled: true,
                     hintText: "Mobile",
@@ -43,6 +49,7 @@ class _SupportFormState extends State<SupportForm> {
                   height: 8,
                 ),
                 TextField(
+                  controller: _emailTEC,
                   decoration: InputDecoration(
                     filled: true,
                     hintText: "Email",
@@ -53,6 +60,7 @@ class _SupportFormState extends State<SupportForm> {
                   height: 8,
                 ),
                 TextField(
+                  controller: _issueTEC,
                   maxLines: 7,
                   decoration: InputDecoration(
                     filled: true,
@@ -73,7 +81,11 @@ class _SupportFormState extends State<SupportForm> {
                                   borderRadius: BorderRadius.circular(20))),
                           backgroundColor: MaterialStateProperty.all(
                               Color.fromARGB(255, 255, 86, 86))),
-                      onPressed: () {},
+                      onPressed: () {
+                        var _mobile = _mobileTEC.text;
+                        var _email = _emailTEC.text;
+                        var _issue = _issueTEC.text;
+                      },
                       child: Text(
                         helpbuttontext,
                         style: TextStyle(letterSpacing: 1.2, fontSize: 20),

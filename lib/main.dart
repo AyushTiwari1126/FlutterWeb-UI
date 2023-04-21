@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
        debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Roboto', brightness: Brightness.dark),
+      theme: ThemeData(fontFamily: 'Roboto', brightness: Brightness.light),
       home: Home(),
     );
   }
